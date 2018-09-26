@@ -75,6 +75,7 @@ WORKDIR /srv/symfony
 # build for production
 ARG APP_ENV=dev
 ARG SYMFONY_ENV=dev
+ARG APP_SECRET=${APP_SECRET}
 
 # prevent the reinstallation of vendors at every changes in the source code
 COPY composer.json composer.lock ./
