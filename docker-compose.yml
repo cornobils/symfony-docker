@@ -34,6 +34,7 @@ services:
     # if you develop on Linux, you may use a bind-mounted host directory instead
     - ./var:/srv/symfony/var:rw
     - ./public:/srv/symfony/public:rw,delegated
+    - ./assets:/srv/symfony/assets:rw,cached
     # if you develop on Linux, you may use a bind-mounted host directory instead
 #    - ./public/media:/srv/symfony/public/media:rw
     #- web-media:/srv/symfony/public/media:rw
@@ -50,7 +51,7 @@ services:
     # you may use a bind-mounted host directory instead, so that it is harder to accidentally remove the volume and lose all your data!
     # - ./docker/mysql/data:/var/lib/mysql:rw,delegated
     ports:
-    - "3306:3306"
+    - "3307:3306"
 
   nodejs:
     build:
